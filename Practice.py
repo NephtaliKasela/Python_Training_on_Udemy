@@ -1,3 +1,5 @@
+from pickle import FALSE
+import pwd
 import random
 import os
 
@@ -35,14 +37,14 @@ import os
 #     print("Yes")
 
 # Random module
-a = random.randint(0, 20)
-print(a)
-b = random.uniform(0, 20)
-print(b)
-c = random.randrange(100)
-print(c)
-d = random.randrange(0, 50, 10)
-print(d)
+# a = random.randint(0, 20)
+# print(a)
+# b = random.uniform(0, 20)
+# print(b)
+# c = random.randrange(100)
+# print(c)
+# d = random.randrange(0, 50, 10)
+# print(d)
 
 # os module
 #chemin = r"C:\Users\NEPHTALI\OneDrive\Bureau\mainFolder"
@@ -54,3 +56,44 @@ print(d)
       # How to remove the folder
 ## #if os.path.exists(dossier):
 ##      #os.removedirs(dossier)
+
+# list fonction
+liste = ["Maxime", "Martine", "Christopher", "Carlos", "Michael", "Eric"]
+trois_premiers = liste[0:3] # INSÉRER CODE ICI
+trois_derniers = liste[-3:]# INSÉRER CODE ICI
+milieu = liste[1:-1] # INSÉRER CODE ICI
+premier_dernier = liste[0::5]# INSÉRER CODE ICI
+print(trois_premiers)
+print(trois_derniers)
+print(milieu)
+print(premier_dernier)
+
+      # index
+index_Martine = liste.index("Martine")
+print(index_Martine)
+      # sorted
+sorted_list = sorted(liste)
+print(sorted_list)
+print(liste)
+      # sort
+liste.sort()
+print(liste)
+      # reverse
+liste.reverse()
+print(liste)
+      # pop
+element = liste.pop(-1)
+print(element)
+print(liste)
+      # Clear
+clr = liste.clear()
+print(clr)
+print(liste)
+      # in AND not in
+liste.extend([1, 2, 3, 4, 5])
+liste.append(6)
+if 6 in liste:
+      print("True")
+liste.remove(6)
+if 6 not in liste:
+      print("True")
