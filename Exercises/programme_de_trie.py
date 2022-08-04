@@ -1,19 +1,6 @@
 from pathlib import Path
 
-
-films = {"Le Seigneur des Anneaux": 12,
-        "Harry Potter": 9,
-        "Blade Runner": 7.5}
-prix = 0
-for i in range(3):
-    if i == 0:
-        prix += films.get("Le Seigneur des Anneaux", 0)
-    if i == 1:
-        prix += films.get("Harry Potter", 0)
-    if i == 2:
-        prix += films.get("Blade Runner", 0)
-print(prix)
-
+# create the dictionary
 Dirs = {".png": "Images",
         ".jpeg": "Images",
         ".jpg": "Images",
@@ -27,10 +14,17 @@ Dirs = {".png": "Images",
         ".mp3": "Musiques",
         ".wav": "Musiques"}
 
+# determine the path where we want to make order
 tri_dir = Path.home() / "Downloads"
+# create the main folder
 tri_dir.mkdir(exist_ok=True)
+# collecte all files in the main folder
 files = [file for file in tri_dir.iterdir() if file.is_file]
+# Let sort them
 for f in files:
+    # determine the path where we want to store the file
     output_dir = tri_dir / Dirs.get(f.suffix, "Autres")
+    # create the specific folder
     output_dir.mkdir(exist_ok=True)
+    # move the file from the main folder to the specific folder
     f.rename(output_dir / f.name)
