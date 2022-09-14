@@ -15,7 +15,7 @@ Lorsque vous utilisez une potion, vous passez le prochain tour.'''
 
 print("\n=== Que le meilleur gagne ===\n")
 point_joueur = 50
-point_enemi = 100         
+point_enemi = 100    
 count = 0
 nombre_de_coup = 0
 while point_joueur > 0 or point_enemi > 0:
@@ -32,40 +32,40 @@ while point_joueur > 0 or point_enemi > 0:
             point_joueur -= attaque_de_enemi
 
             #Afficher le score
-            print(f"Vous avez infligé {attaque_du_joueur} point(s) de dégas à l'enemi.")
-            print(f"L'enemi vous a infligé {attaque_de_enemi} point(s) de dégas.")
+            print(f"Vous avez infligé {attaque_du_joueur} point(s) de dégas à l'enemi.💥💢")
+            print(f"L'enemi vous a infligé {attaque_de_enemi} point(s) de dégas.💥💢")
             if point_enemi > 0 and point_joueur > 0:
-                print(f"Il vous reste {point_joueur} point(s) de vie.")
-                print(f"Il reste {point_enemi} point(s) de vie à l'enemi.")
+                print(f"Il vous reste {point_joueur} point(s) de vie.💓")
+                print(f"Il reste {point_enemi} point(s) de vie à l'enemi.💓")
                 print("-"*50)
             else:
                 # Afficher le resultat final
-                print("Fin de la partie...")
+                print("Fin de la partie...⌛⏰")
                 point_joueur += attaque_de_enemi
                 point_enemi += attaque_du_joueur 
                 if point_enemi > point_joueur:
-                    print("Vous avez perdu.")
+                    print("Vous avez perdu.😵🤧🥴")
                 elif point_joueur > point_enemi:
-                    print("Vous avez gagné.")
+                    print("Vous avez gagné.😎🫂💪🏆")
                 else:
-                    print("Vous êtes à égalité.")
-                print(f"La partie est fini en {nombre_de_coup} manche(s).")
+                    print("Vous êtes à égalité.🙊")
+                print(f"La partie est fini en {nombre_de_coup} manche(s).🤓")
                 break
         # ajouter les points au joueur
         if choice == 2:
             if count < 3:
                 potion = random.randint(15, 50)
                 point_joueur += potion
-                print(f"Votre point est de {point_joueur}")
+                print(f"Votre point est de {point_joueur} 💞")
             else:
-                print("Votre potion est fini...")
+                print("Votre potion est fini...💘")
             count += 1
     except:
         choice = -1    
 
-i = 0
-while True:
-    print(i)
-    i += 1
-    if i == 10:
-        continue
+# i = 0
+# while True:
+#     print(i)
+#     i += 1
+#     if i == 10:
+#         continue
