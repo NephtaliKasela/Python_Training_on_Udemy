@@ -25,7 +25,7 @@ for file in files:
             isnotFile = True
     # print a message if the file is not found
     except:
-        print("{chemin} n'est pas un fichier.")
+        print(f"{chemin} n'est pas un fichier.")
 if isnotFile: print("Fichier introuvable...")
 
 
