@@ -30,10 +30,10 @@ chemin = chemin / "readme.txt"
 chemin.touch()
 chemin.write_text("bonjour")
 # supprimer un ficher text
-chemin.unlink()
+#chemin.unlink()
 
 # supprimer un dossier qui ne contient rien
-chemin = chemin.parent
+#chemin = chemin.parent
 print(chemin)
 chemin.rmdir()
 print(chemin)
