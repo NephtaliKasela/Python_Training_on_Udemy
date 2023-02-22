@@ -1,7 +1,8 @@
+# import math as m
 import random
 
 
-#Exercise : Jeu de role 
+#Exercise : Jeu de role
 '''Règles du jeu
 Le but de ce projet est de créer un jeu de rôle textuel dans le terminal.
 Le jeu comporte deux joueurs : vous et un ennemi.
@@ -15,13 +16,13 @@ Lorsque vous utilisez une potion, vous passez le prochain tour.'''
 
 print("\n=== Que le meilleur gagne ===\n")
 point_joueur = 50
-point_enemi = 100    
+point_enemi = 100
 count = 0
 nombre_de_coup = 0
 while point_joueur > 0 or point_enemi > 0:
     choice = input("Souhaitez-vous attaquer (1) ou utiliser une potion (2) ? ")
-    
-    # Verifier si le nombre entré par l'utilisateur est bel est bien un nombre intier 
+
+    # Verifier si le nombre entré par l'utilisateur est bel est bien un nombre intier
     try:
         choice = int(choice)
         if choice == 1:
@@ -42,7 +43,7 @@ while point_joueur > 0 or point_enemi > 0:
                 # Afficher le resultat final
                 print("Fin de la partie...⌛⏰")
                 point_joueur += attaque_de_enemi
-                point_enemi += attaque_du_joueur 
+                point_enemi += attaque_du_joueur
                 if point_enemi > point_joueur:
                     print("Vous avez perdu.😵🤧🥴")
                 elif point_joueur > point_enemi:
@@ -61,11 +62,6 @@ while point_joueur > 0 or point_enemi > 0:
                 print("Votre potion est fini...💘")
             count += 1
     except:
-        choice = -1    
+        choice = -1
 
-# i = 0
-# while True:
-#     print(i)
-#     i += 1
-#     if i == 10:
-#         continue
+
